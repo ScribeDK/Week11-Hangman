@@ -1,6 +1,5 @@
 var letter = function(Word){
 	this.word = Word;
-	this.letter = [];
 	this.output = [];
 	this.win = function(){
 		var game = true;
@@ -16,14 +15,12 @@ var letter = function(Word){
 				this.output[i] = "_";
 			}
 	}
-	this.update = function(){
-			for(i in this.letter){
+	this.update = function(update){
 				for(e in this.word){
-					if (this.letter[i] == this.word[e]){
+					if (update == this.word[e]){
 						this.output[e] = this.word[e];
 					}
 				}
-			}
 	}	
 }
 

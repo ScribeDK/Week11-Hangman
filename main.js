@@ -5,9 +5,6 @@ var letter = require('./letter.js');
 var word = require('./word.js');
 var game = require('./game.js');
 
-var List = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var gameOver = false;
-
 
 var wordGen = new game();
 
@@ -34,8 +31,7 @@ function Hangman(){
 		var isCorrect = wordCheck.checkWord(guess);
 		
 		if (isCorrect == true){
-			letterOutput.letter.push(guess);
-			letterOutput.update();
+			letterOutput.update(guess);
 		}
 		else if (isCorrect == false){
 			guessCount = guessCount - 1;

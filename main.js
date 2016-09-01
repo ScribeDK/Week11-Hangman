@@ -48,7 +48,7 @@ function Hangman(){
 		
 		//check if player lost
 		if (guessCount == 0){
-			console.log("You have lost.")
+			console.log("You have lost. The word was: " + wordCheck.word)
 		}
 		//check if player won
 		else if (letterOutput.win() == true){
